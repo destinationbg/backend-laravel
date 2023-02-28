@@ -6,16 +6,15 @@
 
 Ето обяснение за какво точно се използва:
 
-1. Извлича статичното съдържание за всяка забележителност от хранилището [static-contents](https://github.com/placesbg/static-contents) и го импортира в базата данни.
+1. Извлича статичното съдържание за категориите, туристическите райони и забележителностите от хранилището [static-contents](https://github.com/placesbg/static-contents) и го импортира в базата данни.
 1. Предоставя публични API endpoints на [Nuxt 3 приложението](https://github.com/placesbg/frontend-nuxt), така че то да може да чете, създава и записва съдържание в базата данни. Въпросните API endpoints касаят основно потребителската функционалност на сайта.
-1. Предоставя API endpoints с ограничен достъп само до себе си. Тези API endpoints са свързани с административния панел, написан на [Vue 3](https://vuejs.org/), и затова са достъпни само вътрешно.
 
 ---
 
 ## Хранилища
 
 1. Част първа - [Статично съдържание](https://github.com/placesbg/static-contents) за забележителностите
-1. Част втора - [Laravel с Vue 3](https://github.com/placesbg/backend-laravel) за административен панел и REST API
+1. Част втора - [Laravel](https://github.com/placesbg/backend-laravel) за административен панел и REST API
 1. Част трета - [Nuxt 3](https://github.com/placesbg/frontend-nuxt) за публичната част на сайта
 
 ## Технологии
@@ -32,17 +31,9 @@
 
 ### Frameworks
 - [Laravel](https://packagist.org/packages/laravel/framework)
-- [Vue 3](https://npmjs.com/package/vue)
 
 ### Authentication
 - [Laravel Sanctum](https://packagist.org/packages/laravel/sanctum)
-
-### Plugins
-- [Vue Router](https://npmjs.com/package/vue-router)
-- [Pinia](https://npmjs.com/package/pinia)
-- [VueUse](https://npmjs.com/package/@vueuse/core)
-- [i18n](https://npmjs.com/package/vue-i18n)
-- [Vee-Validate](https://npmjs.com/package/vee-validate)
 
 ### Styles
 - [SASS](https://npmjs.com/package/sass)
