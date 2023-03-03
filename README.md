@@ -2,20 +2,20 @@
 
 Това хранилище е **втора част** от пъзела, който ви е нужен, за да сглобите проекта.
 
-Приложението, което е поместено в това хранилище, се базира на [Laravel PHP Framework](https://laravel.com/) и отговаря за контрола и предоставянето на информация към [Nuxt 3 приложението](https://github.com/placesbg/frontend-nuxt).
+Приложението, което е поместено в това хранилище, се базира на [Laravel PHP Framework](https://laravel.com/) и отговаря за контрола и предоставянето на информация към [Nuxt 3 приложението](https://github.com/destinationbg/frontend-nuxt).
 
 Ето обяснение за какво точно се използва:
 
-1. Извлича статичното съдържание за категориите, туристическите райони и забележителностите от хранилището [static-contents](https://github.com/placesbg/static-contents) и го импортира в базата данни.
-1. Предоставя публични API endpoints на [Nuxt 3 приложението](https://github.com/placesbg/frontend-nuxt), така че то да може да чете, създава и записва съдържание в базата данни. Въпросните API endpoints касаят основно потребителската функционалност на сайта.
+1. Извлича статичното съдържание за категориите, туристическите райони и забележителностите от хранилището [static-contents](https://github.com/destinationbg/static-contents) и го импортира в базата данни.
+1. Предоставя публични API endpoints на [Nuxt 3 приложението](https://github.com/destinationbg/frontend-nuxt), така че то да може да чете, създава и записва съдържание в базата данни. Въпросните API endpoints касаят основно потребителската функционалност на сайта.
 
 ---
 
 ## Хранилища
 
-1. Част първа - [Статично съдържание](https://github.com/placesbg/static-contents) за забележителностите
-1. Част втора - [Laravel](https://github.com/placesbg/backend-laravel) за административен панел и REST API
-1. Част трета - [Nuxt 3](https://github.com/placesbg/frontend-nuxt) за публичната част на сайта
+1. Част първа - [Статично съдържание](https://github.com/destinationbg/static-contents) за забележителностите
+1. Част втора - [Laravel](https://github.com/destinationbg/backend-laravel) за административен панел и REST API
+1. Част трета - [Nuxt 3](https://github.com/destinationbg/frontend-nuxt) за публичната част на сайта
 
 ## Технологии
 
@@ -64,8 +64,8 @@
 
 Цялата комуникация се извършва чрез нашия [Discord сървър](https://discord.gg/NMRjZ4FdPs), така че трябва да бъдете там, за да проследите процесите.
 
-1. **Исторически текст за забележителност** - използвайте канал `#landmarks`, за да сигнализирате, ако има неточности в текстовете на забележителностите или директно ги променете, както е описано в [Наръчника за текстовете](https://github.com/placesbg/static-contents/blob/main/.github/CONTRIBUTING.md)
-1. **Разработка** - прочетете нашите наръчници на доброволеца в [Laravel хранилището](https://github.com/placesbg/backend-laravel/blob/main/.github/CONTRIBUTING.md) или в [Nuxt 3 хранилището](https://github.com/placesbg/frontend-nuxt/blob/main/.github/CONTRIBUTING.md) и използвайте каналите `#frontend` и `#backend` в Discord
+1. **Исторически текст за забележителност** - използвайте канал `#landmarks`, за да сигнализирате, ако има неточности в текстовете на забележителностите или директно ги променете, както е описано в [Наръчника за текстовете](https://github.com/destinationbg/static-contents/blob/main/.github/CONTRIBUTING.md)
+1. **Разработка** - прочетете нашите наръчници на доброволеца в [Laravel хранилището](https://github.com/destinationbg/backend-laravel/blob/main/.github/CONTRIBUTING.md) или в [Nuxt 3 хранилището](https://github.com/destinationbg/frontend-nuxt/blob/main/.github/CONTRIBUTING.md) и използвайте каналите `#frontend` и `#backend` в Discord
 1. **Дизайн** - използвайте канал `#design` в Discord
 1. **SEO оптимизация** - използвайте канал `#seo` в Discord
 1. **Маркетинг и реклама** - използвайте канал `#marketing` в Discord
@@ -75,8 +75,8 @@
 
 ## Финансов принос
 
-Като проект, управляван изцяло доброволно от общността, без голяма корпоративна подкрепа зад гърба си, приветстваме финансова помощ чрез [GitHub Sponsors](https://github.com/sponsors/placesbg) и [OpenCollective](https://opencollective.com/placesbg) страниците.
+Като проект, управляван изцяло доброволно от общността, без голяма корпоративна подкрепа зад гърба си, приветстваме финансова помощ чрез [GitHub Sponsors](https://github.com/sponsors/destinationbg) и [OpenCollective](https://opencollective.com/destinationbg) страниците.
 
 Предварително благодарим на всеки, който допринесе финансово за поддръжката и развитието на проекта! В изображението отдолу се съдържат аватарите на всички хора, които вече допринесоха.
 
-<a href="https://opencollective.com/placesbg"><img src="https://opencollective.com/placesbg/contributors.svg?width=890" /></a>
+<a href="https://opencollective.com/destinationbg"><img src="https://opencollective.com/destinationbg/contributors.svg?width=890" /></a>
