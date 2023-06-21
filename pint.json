@@ -1,0 +1,13 @@
+{
+    "preset": "laravel",
+    "rules": {
+        "concat_space": {
+            "spacing": "one"
+        },
+        "no_superfluous_phpdoc_tags": false,
+        "ordered_imports": {
+            "sort_algorithm": "alpha",
+            "imports_order": ["class", "const", "function"]
+        }
+    }
+}

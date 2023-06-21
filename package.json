@@ -1,18 +1,59 @@
 {
+    "name": "destinationbg-laravel",
     "private": true,
-    "type": "module",
+    "author": "Alexander Naydenov",
+    "version": "1.0.0",
     "scripts": {
         "dev": "vite",
-        "build": "vite build"
+        "build": "vite build",
+        "lint:eslint": "eslint \"resources/js/**/*.{js,vue}\"",
+        "lint:eslint:fix": "eslint --fix \"resources/js/**/*.{js,vue}\"",
+        "lint:prettier": "prettier --check \"resources/js/**/*.{js,vue}\"",
+        "lint:prettier:fix": "prettier --write \"resources/js/**/*.{js,vue}\"",
+        "lint:stylelint": "stylelint \"resources/sass/**/*.{css,scss}\"",
+        "lint:stylelint:fix": "stylelint \"resources/sass/**/*.{css,scss}\" --fix",
+        "lint:pint": "./vendor/bin/pint",
+        "lint:blade": "./node_modules/.bin/prettier --write resources/**/*.blade.php -c",
+        "lint": "npm run lint:pint --test && npm run lint:eslint && npm run lint:prettier && npm run lint:stylelint",
+        "lint:fix": "npm run lint:pint && npm run lint:blade && npm run lint:eslint:fix && npm run lint:prettier:fix && npm run lint:stylelint:fix",
+        "prepare": "husky install"
     },
     "devDependencies": {
-        "@tailwindcss/forms": "^0.5.2",
+        "@shufo/prettier-plugin-blade": "^1.8.4",
         "alpinejs": "^3.4.2",
         "autoprefixer": "^10.4.2",
         "axios": "^1.1.2",
+        "eslint": "^8.33.0",
+        "eslint-config-prettier": "^8.6.0",
+        "eslint-plugin-prettier": "^4.2.1",
+        "eslint-plugin-vue": "^9.9.0",
+        "husky": "^8.0.2",
         "laravel-vite-plugin": "^0.7.5",
+        "lint-staged": "^13.1.0",
         "postcss": "^8.4.6",
-        "tailwindcss": "^3.1.0",
+        "prettier": "^2.8.1",
+        "sass": "^1.57.1",
+        "sass-loader": "^13.2.0",
+        "stylelint": "^14.16.1",
+        "stylelint-config-recommended": "^9.0.0",
+        "stylelint-config-standard": "^29.0.0",
+        "stylelint-config-standard-scss": "^6.1.0",
+        "stylelint-order": "^5.0.0",
         "vite": "^4.0.0"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged",
+            "post-commit": "git update-index --again"
+        }
+    },
+    "lint-staged": {
+        "**/*.{js,vue}": [
+            "npm run lint:eslint:fix",
+            "npm run lint:prettier:fix"
+        ],
+        "**/*.{css,scss}": [
+            "npm run lint:stylelint:fix"
+        ]
     }
 }
