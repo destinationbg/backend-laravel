@@ -5,17 +5,33 @@
          colors="true"
 >
     <testsuites>
+        <testsuite name="Architecture">
+            <directory>tests/Architecture</directory>
+        </testsuite>
         <testsuite name="Unit">
-            <directory suffix="Test.php">./tests/Unit</directory>
+            <directory>tests/Unit</directory>
         </testsuite>
         <testsuite name="Feature">
-            <directory suffix="Test.php">./tests/Feature</directory>
+            <directory>tests/Feature</directory>
         </testsuite>
     </testsuites>
+    <coverage>
+        <report>
+            <cobertura outputFile="storage/tests/reports/coverage.cobertura.xml"/>
+            <html outputDirectory="storage/tests/reports/coverage"/>
+        </report>
+    </coverage>
+    <logging>
+        <junit outputFile="storage/tests/logging/junit.xml"/>
+    </logging>
     <source>
         <include>
-            <directory suffix=".php">./app</directory>
+            <directory>app</directory>
         </include>
+        <exclude>
+            <file>app/Http/Middleware/TrustHosts.php</file>
+            <file>app/Providers/BroadcastServiceProvider.php</file>
+        </exclude>
     </source>
     <php>
         <env name="APP_ENV" value="testing"/>
