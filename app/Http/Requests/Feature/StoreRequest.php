@@ -27,7 +27,7 @@ class StoreRequest extends FormRequest
     {
         return [
             'slug' => [
-                Rule::unique('feature'),
+                Rule::unique('features'),
             ],
             'title' => 'required|array',
             'description' => 'required|array',

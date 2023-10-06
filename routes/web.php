@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 use App\Http\Controllers\FeatureController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\RegionController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -33,6 +34,7 @@ Route::middleware('auth')->group(function () {
 
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::resource('features', FeatureController::class);
+    Route::resource('regions', RegionController::class);
 });
 
 require __DIR__ . '/auth.php';

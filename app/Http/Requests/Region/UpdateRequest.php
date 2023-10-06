@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Http\Requests\Feature;
+namespace App\Http\Requests\Region;
 
 use Illuminate\Contracts\Validation\ValidationRule;
 use Illuminate\Foundation\Http\FormRequest;
@@ -27,8 +27,9 @@ class UpdateRequest extends FormRequest
     {
         return [
             'slug' => [
-                Rule::unique('features')->ignore($this->feature->id),
+                Rule::unique('regions')->ignore($this->region->id),
             ],
+            'color' => 'required|string',
             'title' => 'required|array',
             'description' => 'required|array',
             'title.*' => 'string',
