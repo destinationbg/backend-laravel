@@ -4,5 +4,5 @@
 npx --no-install lint-staged
 
 ./vendor/bin/sail artisan test --parallel
-./vendor/bin/sail artisan test --type-coverage
+./vendor/bin/sail artisan test --type-coverage --min=100
 #php artisan dusk --pest

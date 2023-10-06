@@ -7,13 +7,15 @@ namespace App\Http\Controllers;
 use App\Http\Requests\Feature\StoreRequest;
 use App\Http\Requests\Feature\UpdateRequest;
 use App\Models\Feature;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\View\View;
 
 class FeatureController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(): View
     {
         $features = Feature::all();
 
@@ -23,7 +25,7 @@ class FeatureController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create(): View
     {
         return view('features.create');
     }
@@ -31,7 +33,7 @@ class FeatureController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreRequest $request)
+    public function store(StoreRequest $request): RedirectResponse
     {
         $feature = Feature::create($request->validated());
 
@@ -41,7 +43,7 @@ class FeatureController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Feature $feature)
+    public function show(Feature $feature): View
     {
         return view('features.show', compact('feature'));
     }
@@ -49,7 +51,7 @@ class FeatureController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Feature $feature)
+    public function edit(Feature $feature): View
     {
         return view('features.edit', compact('feature'));
     }
@@ -57,7 +59,7 @@ class FeatureController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateRequest $request, Feature $feature)
+    public function update(UpdateRequest $request, Feature $feature): RedirectResponse
     {
         $feature->update($request->validated());
 
@@ -67,7 +69,7 @@ class FeatureController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Feature $feature)
+    public function destroy(Feature $feature): RedirectResponse
     {
         $feature->delete();
 

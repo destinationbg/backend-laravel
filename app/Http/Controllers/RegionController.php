@@ -7,13 +7,15 @@ namespace App\Http\Controllers;
 use App\Http\Requests\Region\StoreRequest;
 use App\Http\Requests\Region\UpdateRequest;
 use App\Models\Region;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\View\View;
 
 class RegionController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(): View
     {
         $regions = Region::all();
 
@@ -23,7 +25,7 @@ class RegionController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create(): View
     {
         return view('regions.create');
     }
@@ -31,7 +33,7 @@ class RegionController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreRequest $request)
+    public function store(StoreRequest $request): RedirectResponse
     {
         $region = Region::create($request->validated());
 
@@ -41,7 +43,7 @@ class RegionController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Region $region)
+    public function show(Region $region): View
     {
         return view('regions.show', compact('region'));
     }
@@ -49,7 +51,7 @@ class RegionController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Region $region)
+    public function edit(Region $region): View
     {
         return view('regions.edit', compact('region'));
     }
@@ -57,7 +59,7 @@ class RegionController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateRequest $request, Region $region)
+    public function update(UpdateRequest $request, Region $region): RedirectResponse
     {
         $region->update($request->validated());
 
@@ -67,7 +69,7 @@ class RegionController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Region $region)
+    public function destroy(Region $region): RedirectResponse
     {
         $region->delete();
 
