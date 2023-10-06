@@ -1,7 +1,8 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-npm run lint:pint
-npm run lint:blade
-
 npx --no-install lint-staged
+
+#./vendor/bin/sail artisan test --parallel
+#./vendor/bin/sail artisan test --type-coverage
+#php artisan dusk --pest

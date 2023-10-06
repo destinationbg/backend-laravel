@@ -54,6 +54,12 @@
         ],
         "**/*.{css,scss}": [
             "npm run lint:stylelint:fix"
+        ],
+        "**/*.php": [
+            "npm run lint:pint"
+        ],
+        "**/*.blade.php": [
+            "npm run lint:blade"
         ]
     }
 }

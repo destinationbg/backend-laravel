@@ -12,8 +12,8 @@ use Spatie\Translatable\HasTranslations;
 class Feature extends Model
 {
     use HasFactory;
-    use HasUuids;
     use HasTranslations;
+    use HasUuids;
 
     protected $fillable = [
         'slug',
