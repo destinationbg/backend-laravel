@@ -28,8 +28,13 @@
                         {{ __('navigation.locations') }}
                     </x-nav-link>
 
+                    <x-nav-link :href="route('regions.index')" :active="request()->routeIs('regions.*')">
+                        {{ __('navigation.regions') }}
+                    </x-nav-link>
+
                     <!-- Localities Dropdown -->
-                    <div class="hidden sm:flex sm:items-center sm:ml-6 @if (request()->routeIs('regions.*') || request()->routeIs('provinces.*')) inline-flex items-center px-1 pt-1 border-b-2 border-indigo-400 text-base font-medium leading-5 text-gray-900 focus:outline-none focus:border-indigo-700 transition duration-150 ease-in-out @else inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-base font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out @endif">
+                    <div
+                        class="hidden sm:flex sm:items-center sm:ml-6 @if (request()->routeIs('regions.*') || request()->routeIs('provinces.*')) inline-flex items-center px-1 pt-1 border-b-2 border-indigo-400 text-base font-medium leading-5 text-gray-900 focus:outline-none focus:border-indigo-700 transition duration-150 ease-in-out @else inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-base font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out @endif">
                         <x-dropdown align="left" width="48">
                             <x-slot name="trigger">
                                 <button
@@ -47,10 +52,6 @@
                             </x-slot>
 
                             <x-slot name="content">
-                                <x-dropdown-link :href="route('regions.index')" :active="request()->routeIs('regions.*')">
-                                    {{ __('navigation.regions') }}
-                                </x-dropdown-link>
-
                                 <x-dropdown-link :href="route('provinces.index')" :active="request()->routeIs('provinces.*')">
                                     {{ __('navigation.provinces') }}
                                 </x-dropdown-link>

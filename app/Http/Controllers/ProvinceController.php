@@ -18,7 +18,7 @@ class ProvinceController extends Controller
     {
         $provinces = Province::all();
 
-        return view('provinces.index', compact('provinces'));
+        return view('localities.provinces.index', compact('provinces'));
     }
 
     /**
@@ -26,7 +26,7 @@ class ProvinceController extends Controller
      */
     public function create()
     {
-        return view('provinces.create');
+        return view('localities.provinces.create');
     }
 
     /**
@@ -36,7 +36,7 @@ class ProvinceController extends Controller
     {
         $province = Province::create($request->validated());
 
-        return redirect()->route('provinces.show', $province);
+        return redirect()->route('localities.provinces.show', $province);
     }
 
     /**
@@ -44,7 +44,7 @@ class ProvinceController extends Controller
      */
     public function show(Province $province)
     {
-        return view('provinces.show', compact('province'));
+        return view('localities.provinces.show', compact('province'));
     }
 
     /**
@@ -52,7 +52,7 @@ class ProvinceController extends Controller
      */
     public function edit(Province $province)
     {
-        return view('provinces.edit', compact('province'));
+        return view('localities.provinces.edit', compact('province'));
     }
 
     /**
