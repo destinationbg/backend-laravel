@@ -5,7 +5,7 @@ module.exports = {
         jest: true,
         node: true
     },
-    extends: ['eslint:recommended', 'plugin:prettier/recommended', 'plugin:vue/vue3-recommended', 'prettier'],
+    extends: ['eslint:recommended', 'plugin:prettier/recommended', 'prettier'],
     parserOptions: {
         ecmaVersion: 'latest',
         sourceType: 'module'
@@ -18,8 +18,6 @@ module.exports = {
         'no-inner-declarations': 'off',
         'no-undef': 0,
         'no-unused-vars': 'off',
-        'vue/no-v-html': 'off',
-        'vue/require-default-prop': 'off',
         'prettier/prettier': [
             'error',
             {

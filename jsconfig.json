@@ -12,7 +12,7 @@
             "@resources/*": ["resources/*"]
         }
     },
-    "exclude": ["dist", "node_modules", "build", ".vscode", ".nuxt", "coverage", ".npm", ".yarn"],
+    "exclude": ["dist", "node_modules", "build", ".vscode", "coverage", ".npm", ".yarn"],
     "typeAcquisition": {
         "enable": true
     }

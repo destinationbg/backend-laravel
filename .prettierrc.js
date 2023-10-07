@@ -8,6 +8,7 @@ module.exports = {
     trailingComma: 'none',
     useTabs: false,
     vueIndentScriptAndStyle: true,
+    plugins: ['@shufo/prettier-plugin-blade'],
     overrides: [
         {
             files: ['*.blade.php'],
