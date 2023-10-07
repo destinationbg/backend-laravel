@@ -5,6 +5,7 @@ declare(strict_types=1);
 return [
     'account_restore' => 'Възстановяване на акаунта',
     'already_registered' => 'Вече имате регистрация?',
+    'create' => 'Създаване',
     'delete' => 'Изтриване',
     'edit' => 'Редактиране',
     'forgot_password' => 'Забравена парола?',

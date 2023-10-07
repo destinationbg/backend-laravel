@@ -24,4 +24,60 @@ return [
             'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
         ],
     ],
+    'category' => [
+        'index' => [
+            'message' => [
+                'no_results' => 'No categories have been added to the system yet.',
+            ],
+        ],
+    ],
+    'city' => [
+        'index' => [
+            'message' => [
+                'no_results' => 'No cities have been added to the system yet.',
+            ],
+        ],
+    ],
+    'feature' => [
+        'index' => [
+            'message' => [
+                'no_results' => 'No features added to the system yet.',
+            ],
+        ],
+    ],
+    'location' => [
+        'index' => [
+            'message' => [
+                'no_results' => 'No locations added to the system yet.',
+            ],
+        ],
+    ],
+    'municipality' => [
+        'index' => [
+            'message' => [
+                'no_results' => 'No municipalities have been added to the system yet.',
+            ],
+        ],
+    ],
+    'province' => [
+        'index' => [
+            'message' => [
+                'no_results' => 'No provinces have been added to the system yet.',
+            ],
+        ],
+    ],
+    'region' => [
+        'index' => [
+            'message' => [
+                'no_results' => 'No tourist regions have been added to the system yet.',
+            ],
+        ],
+    ],
+    'village' => [
+        'index' => [
+            'message' => [
+                'no_results' => 'No villages have been added to the system yet.',
+            ],
+        ],
+    ],
 ];

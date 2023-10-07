@@ -5,6 +5,7 @@ declare(strict_types=1);
 return [
     'account_restore' => 'Account Restore',
     'already_registered' => 'Already registered?',
+    'create' => 'Create',
     'delete' => 'Delete',
     'edit' => 'Edit',
     'forgot_password' => 'Forgot password?',

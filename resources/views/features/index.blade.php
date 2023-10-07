@@ -3,12 +3,16 @@
         <h1 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('navigation.features') }}
         </h1>
+
+        <a href="{{ route('features.create') }}" class="text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-base px-4 py-2 text-center inline-flex items-center mr-2">
+            <span>{{ __('button.create') }}</span>
+        </a>
     </x-slot>
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 space-y-6">
             <div class="bg-white shadow overflow-hidden sm:rounded-lg">
-                @if ($features)
+                @if (!$features->isEmpty())
                     <div class="relative overflow-x-auto">
                         <table class="w-full text-sm text-left text-gray-500 ">
                             <thead class="text-xs text-gray-700 uppercase bg-gray-50 ">
@@ -66,7 +70,9 @@
                         </table>
                     </div>
                 @else
-                    <div class="p-6 text-gray-900">No features yet.</div>
+                    <div class="p-4 sm:p-8 bg-white shadow overflow-hidden sm:rounded-lg">
+                        <p>{{ __('page.feature.index.message.no_results') }}</p>
+                    </div>
                 @endif
             </div>
         </div>
