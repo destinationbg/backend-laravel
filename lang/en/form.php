@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 return [
     'label' => [
+        'code_ekatte' => 'EKATTE Code',
         'code_municipality_center' => 'Municipal Center Code',
         'code_municipality' => 'Municipality Code',
         'code_province_center' => 'District Center Code',

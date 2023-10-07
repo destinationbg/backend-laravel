@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 return [
     'label' => [
+        'code_ekatte' => 'ЕКАТТЕ код',
         'code_municipality_center' => 'Код на общинския център',
         'code_municipality' => 'Код на общината',
         'code_province_center' => 'Код на областния център',
