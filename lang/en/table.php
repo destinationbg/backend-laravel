@@ -6,6 +6,7 @@ return [
     'color' => 'Color',
     'id' => 'ID',
     'name' => 'Name',
+    'region' => 'Tourist Region',
     'slug' => 'Slug',
     'title' => 'Title',
 ];
