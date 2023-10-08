@@ -14,6 +14,7 @@ return [
         'email' => 'Email Address',
         'password_confirm' => 'Confirm Password',
         'password' => 'Password',
+        'region' => 'Tourist Region',
         'remember_me' => 'Remember me',
         'slug' => 'Slug',
         'updated_at' => 'Updated At',

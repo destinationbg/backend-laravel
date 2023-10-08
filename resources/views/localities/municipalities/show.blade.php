@@ -19,8 +19,9 @@
                     <dl class="block w-full">
                         <dt class="mb-2 font-semibold leading-none text-gray-900">{{ __('form.label.region') }}</dt>
                         <dd class="flex items-center gap-2 font-regular leading-none text-gray-500">
-                            <div class="w-5 h-5 rounded-md block" style="background-color: {{ $region->color }}"></div>
-                            <span>{{ $region->color }}</span>
+                            <div class="p-3 whitespace-nowrap rounded-md flex" style="background-color: {{ $municipality->region->color ?? '#e2e8f0' }}">
+                                {{ $municipality->region }}
+                            </div>
                         </dd>
                     </dl>
 

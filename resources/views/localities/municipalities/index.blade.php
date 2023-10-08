@@ -42,9 +42,9 @@
                                         </td>
                                         <td class="px-6 py-4">
                                             <div class="flex items-center gap-2 font-regular leading-none text-gray-500">
-                                                <div class="w-5 h-5 rounded-md block"
-                                                    style="background-color: {{ $municipality->region->color }}"></div>
-                                                <span>{{ $municipality->region }}</span>
+                                                <div class="p-3 whitespace-nowrap rounded-md flex" style="background-color: {{ $municipality->region->color ?? '#e2e8f0' }}">
+                                                    {{ $municipality->region }}
+                                                </div>
                                             </div>
                                         </td>
                                         <td class="flex align-center justify-end px-6 py-4">
