@@ -1,35 +1,35 @@
 <x-app-layout>
     <x-slot name="header">
         <h1 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('navigation.province_show') }}
+            {{ __('navigation.city_show') }}
         </h1>
     </x-slot>
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 space-y-6">
             <div class="p-4 sm:p-8 bg-white shadow overflow-hidden sm:rounded-lg">
-                <h2 class="mb-6 text-xl font-semibold leading-none text-gray-900 md:text-2xl">{{ $province->name }}</h2>
+                <h2 class="mb-6 text-xl font-semibold leading-none text-gray-900 md:text-2xl">{{ $city->name }}</h2>
 
                 <div class="flex justify-between gap-5 mb-5">
                     <dl class="block w-full">
                         <dt class="mb-2 font-semibold leading-none text-gray-900">{{ __('form.label.slug') }}</dt>
-                        <dd class="font-light leading-none text-gray-500">{{ $province->slug }}</dd>
+                        <dd class="font-light leading-none text-gray-500">{{ $city->slug }}</dd>
                     </dl>
 
                     <dl class="block w-full">
                         <dt class="mb-2 font-semibold leading-none text-gray-900">{{ __('form.label.code_municipality') }}</dt>
-                        <dd class="font-light leading-none text-gray-500">{{ $province->code }}</dd>
+                        <dd class="font-light leading-none text-gray-500">{{ $city->code }}</dd>
                     </dl>
 
                     <dl class="block w-full">
                         <dt class="mb-2 font-semibold leading-none text-gray-900">{{ __('form.label.code_ekatte') }}</dt>
-                        <dd class="font-light leading-none text-gray-500">{{ $province->ekatte }}</dd>
+                        <dd class="font-light leading-none text-gray-500">{{ $city->ekatte }}</dd>
                     </dl>
                 </div>
 
                 <dl>
                     <dt class="mb-2 font-semibold leading-none text-gray-900">{{ __('form.label.description') }}</dt>
-                    <dd class="mb-4 font-light leading-tight text-gray-500 sm:mb-5">{{ $province->description }}</dd>
+                    <dd class="mb-4 font-light leading-tight text-gray-500 sm:mb-5">{{ $city->description }}</dd>
                 </dl>
 
                 <hr class="h-px my-6 bg-slate-200 border-0">
@@ -38,18 +38,18 @@
                     <div>
                         <dt class="mb-2 font-semibold leading-none text-gray-900">{{ __('form.label.created_at') }}</dt>
                         <dd class="mb-4 font-light leading-none text-gray-500 sm:mb-5">
-                            {{ $province->created_at->format('d.m.Y, H:i:s') }}</dd>
+                            {{ $city->created_at->format('d.m.Y, H:i:s') }}</dd>
                     </div>
 
                     <div>
                         <dt class="mb-2 font-semibold leading-none text-gray-900">{{ __('form.label.updated_at') }}</dt>
                         <dd class="mb-4 font-light leading-none text-gray-500 sm:mb-5">
-                            {{ $province->updated_at->format('d.m.Y, H:i:s') }}</dd>
+                            {{ $city->updated_at->format('d.m.Y, H:i:s') }}</dd>
                     </div>
                 </dl>
 
                 <div class="flex items-center space-x-4">
-                    <a href="{{ route('provinces.edit', $province) }}"
+                    <a href="{{ route('cities.edit', $city) }}"
                         class="text-white font-medium text-base text-center leading-none inline-flex items-center gap-3 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-base p-3">
                         <svg aria-hidden="true" class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"
                             xmlns="http://www.w3.org/2000/svg">
@@ -61,7 +61,7 @@
                         <span>{{ __('button.edit') }}</span>
                     </a>
 
-                    {{ html()->form('DELETE', route('provinces.destroy', $province))->open() }}
+                    {{ html()->form('DELETE', route('cities.destroy', $city))->open() }}
                     <button type="submit"
                         class="text-white font-medium inline-flex text-base text-center leading-none items-center gap-3 bg-red-600 hover:bg-red-700 focus:ring-4 focus:outline-none focus:ring-red-300 rounded-lg text-base p-3">
                         <svg aria-hidden="true" class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"
