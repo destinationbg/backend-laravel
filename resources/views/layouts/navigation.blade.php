@@ -48,15 +48,15 @@
                                     {{ __('navigation.provinces') }}
                                 </x-dropdown-link>
 
-                                <x-dropdown-link href="#" :active="request()->routeIs('municipalities.*')">
+                                <x-dropdown-link :href="route('municipalities.index')" :active="request()->routeIs('municipalities.*')">
                                     {{ __('navigation.municipalities') }}
                                 </x-dropdown-link>
 
-                                <x-dropdown-link href="#" :active="request()->routeIs('cities.*')">
+                                <x-dropdown-link :href="route('cities.index')" :active="request()->routeIs('cities.*')">
                                     {{ __('navigation.cities') }}
                                 </x-dropdown-link>
 
-                                <x-dropdown-link href="#" :active="request()->routeIs('villages.*')">
+                                <x-dropdown-link :href="route('villages.index')" :active="request()->routeIs('villages.*')">
                                     {{ __('navigation.villages') }}
                                 </x-dropdown-link>
                             </x-slot>
@@ -142,15 +142,15 @@
                 {{ __('navigation.provinces') }}
             </x-responsive-nav-link>
 
-            <x-responsive-nav-link href="#" :active="request()->routeIs('municipalities.*')">
+            <x-responsive-nav-link :href="route('municipalities.index')" :active="request()->routeIs('municipalities.*')">
                 {{ __('navigation.municipalities') }}
             </x-responsive-nav-link>
 
-            <x-responsive-nav-link href="#" :active="request()->routeIs('cities.*')">
+            <x-responsive-nav-link :href="route('cities.index')" :active="request()->routeIs('cities.*')">
                 {{ __('navigation.cities') }}
             </x-responsive-nav-link>
 
-            <x-responsive-nav-link href="#" :active="request()->routeIs('villages.*')">
+            <x-responsive-nav-link :href="route('villages.index')" :active="request()->routeIs('villages.*')">
                 {{ __('navigation.villages') }}
             </x-responsive-nav-link>
 

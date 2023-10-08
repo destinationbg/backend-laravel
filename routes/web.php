@@ -2,10 +2,13 @@
 
 declare(strict_types=1);
 
+use App\Http\Controllers\CityController;
 use App\Http\Controllers\FeatureController;
+use App\Http\Controllers\MunicipalityController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProvinceController;
 use App\Http\Controllers\RegionController;
+use App\Http\Controllers\VillageController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -35,6 +38,9 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::resource('features', FeatureController::class);
     Route::resource('regions', RegionController::class);
     Route::resource('provinces', ProvinceController::class);
+    Route::resource('municipalities', MunicipalityController::class);
+    Route::resource('cities', CityController::class);
+    Route::resource('villages', VillageController::class);
 });
 
 require __DIR__ . '/auth.php';

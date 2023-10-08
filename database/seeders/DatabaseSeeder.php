@@ -18,6 +18,9 @@ class DatabaseSeeder extends Seeder
             FeatureSeeder::class,
             RegionSeeder::class,
             ProvinceSeeder::class,
+            MunicipalitySeeder::class,
+            CitySeeder::class,
+            VillageSeeder::class,
         ]);
     }
 }
